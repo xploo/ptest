@@ -1,5 +1,6 @@
 {
     "name": "xploo/permanent.notdienstplan",
+    "version": "1.0.0",
     "type": "typo3-flow-package",
     "description": "Notdienstplan von permanent. Wirtschaftsförderung GmbH & CO KG",
     "require": {
