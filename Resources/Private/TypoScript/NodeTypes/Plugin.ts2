@@ -1,0 +1,28 @@
+/**
+ * emergency pharmacies Neos-Nodetype typoScript
+ * author: Damian Bücker
+ * date: 21.03.2016
+ * company: permanent. Wirtschaftsförderung GmbH & Co KG 
+ * version: 1.0
+ *  
+ */
+include="resource://permanent.basic/Private/TypoScript/Root.ts2"
+prototype(permanent.emergency:Plugin) < prototype(TYPO3.Neos:Plugin)
+prototype(permanent.emergency:Plugin) {
+    
+    gridProperties = permanent.basic:GridProperties
+    partialRootPath = 'resource://permanent.basic/Private/Templates/Partials'
+    package = 'permanent.emergency'
+    controller = 'Standard'
+    myNodeName = ${q(node).property('name')}
+    lat = ${q(node).property('lat')}
+    lon = ${q(node).property('lon')}
+    addresses = ${q(node).property('addressData')}
+    radius = ${q(node).property('radius')}
+    useAddress = ${q(node).property('useAddress')}
+    minResult = ${q(node).property('minResult')}
+    showmap = ${q(node).property('showmap')}
+    showlist = ${q(node).property('showlist')}
+
+}
+

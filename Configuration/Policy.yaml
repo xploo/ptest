@@ -1,0 +1,10 @@
+privilegeTargets:
+  TYPO3\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    'permanent.emergency:StandardControllerActions':
+      matcher: 'method(permanent\emergency\Controller\StandardController->(.*)Action())'
+roles:
+  'TYPO3.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'permanent.emergency:StandardControllerActions'
+        permission: GRANT

@@ -1,0 +1,103 @@
+'TYPO3.Neos.NodeTypes:EmergencyMixin':
+  ui:
+    label: 'Notdienstplan'
+    inspector:
+      groups:  
+        group:
+          label: 'Segment / Gruppen- ID'
+          position: 1
+        latlong:
+          label: 'Koordinaten'
+          position: 2
+        address:
+           label: 'Adressen'
+           position: 3
+        radius:
+           label: 'Radius'
+           position: 4
+  properties:
+    lat:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Latitude'
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: 'latlong'
+    lon:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Longitude'
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: 'latlong'
+    useAddress:
+      type: boolean
+      defaultValue: ''
+      ui:
+        label: 'Host-Daten verwenden'
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: 'address'
+    name:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Apotheken Name'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'address'
+    street:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Straße'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'address'
+    zip:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'PLZ'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'address'
+    city:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Stadt'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'address'
+    district:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Bezirk (optional)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'address'
+    radius:
+      type: string
+      defaultValue: '5'
+      ui:
+        label: 'Radius'
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: 'radius'
+    minResult:
+      type: string
+      defaultValue: '5'
+      ui:
+        label: 'Minimale Funde'
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: 'radius'
