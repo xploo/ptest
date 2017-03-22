@@ -1,14 +1,18 @@
 {
-    "name": "xploo/permanent.notdienstplan",
-    "version": "1.0.0",
-    "type": "typo3-flow-package",
-    "description": "Notdienstplan von permanent. Wirtschaftsförderung GmbH & CO KG",
+    "description": "Layout tests for new sh*t",
+    "type": "neos-package",
     "require": {
-        "typo3/neos": "*"
+        "typo3/flow": "*"
     },
+    "name": "permanent/layouts",
     "autoload": {
         "psr-0": {
-            "permanent\\emergency": "Classes"
+            "permanent\\layouts": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "permanent.layouts"
         }
     }
 }

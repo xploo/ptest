@@ -1,4 +1,0 @@
-/**
- * Root TypoScript template
- */
-include: NodeTypes/*

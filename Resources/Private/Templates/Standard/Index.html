@@ -1,88 +1,15 @@
-{namespace neos=TYPO3\Neos\ViewHelpers}
-<div class="om3__segment om3__segment__emergency
+<f:layout name="Default" />
 
-     <f:render partial='basic_classes' arguments='{_all}' />
-     "
-     style="
-     <f:render partial='basic_styles' arguments='{_all}' />">
-    <div id="axovis-map-canvas" class="" style=""></div>
-    <div id="emergencyService">
-        <f:if condition="{addressData}">
-            <f:then>
-                <div id="emergencyServiceMap"><!-- --></div>
+<f:section name="Title">Index view of Standard controller</f:section>
 
-                <div class="error warning">
-                    <!--hier war error messaging drin -->
-                </div>
-                <table class="emergencyService ovis-map-canvas">
-                    <tr>
-                        <td colspan="5" class="info"><form action="" method="post">
-                                <div>
-                                    <input type="hidden" name="id" value="17006" />
-                                    <input type="hidden" id="emergencyDay" name="day" value="0" />
-                                </div>
-
-                                <div class="om3__segment__emergency_input">
-                                    <div class="nav om3__segment__emergency_input_arrows">
-
-                                        <div class="date">
-                                            <div class="line1">Donnerstag</div>
-                                            <div class="line2">04. Februar</div>
-                                        </div>
-
-                                        <div class="datePrev"><input type="image" name="prev" src="{f:uri.resource(path:'Images/date_previous.png', package:'permanent.emergency')}" alt="einen Tag zurück" /></div>
-
-                                        <div class="dateNext"><input type="image" name="next" src="{f:uri.resource(path:'Images/date_next.png', package:'permanent.emergency')}" alt="einen Tag vor" /></div>
-                                    </div>
-
-
-                                    <div class="zip om3__segment__emergency_input_arrows">
-                                        <label for="emergencyZip">PLZ:</label>
-                                        <input class="zip" type="text" id="emergencyZip" name="zip" size="5" value="" />
-                                        <input class="submit" type="image" src='{f:uri.resource(path: "Images/search.png", package: "permanent.emergency")}' alt="PLZ wechseln" />
-                                    </div>
-
-                                </div>
-                            </form></td>
-                    </tr>
-                    <tr class="theadline">
-                        <th class="distance p2">km</th>
-                        <th class="name p2">Apotheke</th>
-                        <th class="address p2">Adresse</th>
-                        <th class="time p2">von &nbsp; bis</th>
-                        <th></th>
-                    </tr>
-                    <tr class="eP">
-
-                    </tr>
-                </table>
-                <div id="apotheken_de">
-                    Mit freundlicher Unterstützung von <a href="http://www.apotheken.de" target="_blank">apotheken.de</a>.
-                    <f:if condition="{addressData}">
-                        <f:then>
-                            <f:for each="{addressData}" as="address" iteration="i">
-                                <div id="base_address_{i.cycle}" style="display:none">
-                                    <div class="name p2">{address.name}</div>
-                                    <div class="street p2">{address.street}</div>
-                                    <div class="zip p2">{address.zip}</div>
-                                    <div class="city p2">{address.city}</div>
-                                    <div class="lat p2">{address.lat}</div>
-                                    <div class="lon p2">{address.lon}</div>
-                                    <div class="radius p2">{radius}</div>
-                                    <div class="minResult p2">{minResult}</div>
-                                </div>
-                            </f:for>
-                        </f:then>
-                    </f:if>
-                </div>
-            </f:then>
-        </f:if>
-    </div>
-    <script type="text/javascript">
-        // TODO Get rid of those global variables
-        var ImgBasePath = '{f:uri.resource(path:"Images/", package: "permanent.emergency")}';
-        var ImgEmergencyPath = '{f:uri.resource(path:"Images/Emergency/", package: "permanent.emergency")}';
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key={api_key}"></script>
-    <script src="{f:uri.resource(path: 'JavaScript/EmergencyService.js', package: 'permanent.emergency')}"></script>
-</div>
+<f:section name="Content">
+    <h1>A freshly created Fluid template!</h1>
+    <p>Some data set by the controller:</p>
+    <ul>
+        
+        <f:for each="{foos}" as="foo">
+            <li>{foo}</li>
+        </f:for>
+        
+    </ul>
+</f:section>
